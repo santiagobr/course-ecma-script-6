@@ -90,3 +90,59 @@ console.log(globalVar) // Global Var: porque es de scope global
   No se puede reasignar una variable declarada con const
 */
 
+/* Propiedad de objetos mejorada */
+
+
+/* Antes de ECMAScript6 */
+let name = 'santiago'
+let age = 19
+
+obj = {name: name, age: age}
+
+/* Después de ECMAScript6 */
+
+obj2 = { name, age }
+
+console.log(obj2)
+
+/* Arrow Functions */
+
+const names = [
+  {name: 'santiago', age: 19}
+  {name: 'jessica', age: 26}
+]
+
+/* Antes de ECMAScript6 */
+let listOfNames = names.map(function (item) {
+  console.log(item.name)
+})
+
+/* Después de ECMAScript6 */
+let listOfNames2 = names.map(item => console.log(item.name))
+
+const listOfNames3 = (name, age, country) => {
+  return null
+}
+
+const listOfNames4 = name => {
+  return null
+}
+
+const square = num => num * num
+
+
+/* Promesas */
+
+const helloPromise = () => {
+  return new Promise((resolve, reject) => {
+    if(!true) {
+      resolve('Hey!')
+    }else {
+      reject('Ups!')
+    }
+  })
+}
+
+helloPromise()
+  .then(response => console.log(response))
+  .catch(error => console.log(error))
