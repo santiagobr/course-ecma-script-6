@@ -44,3 +44,49 @@ ahora es otra frase épica.`
 
 console.log(lorem)
 console.log(lorem2)
+
+/* Desestructuración de elementos */
+
+/* Antes de ECMAScript6 */
+let person = {
+  name: 'santiago',
+  age: 19,
+  country: 'CO'
+}
+
+console.log(person.name, person.age, person.country)
+
+/* Después de ECMAScript6 */
+let {name, age, country} = person
+console.log(name, age, country)
+
+
+/* Spread Operator */
+
+let team1 = ['Santiago', 'Julián', 'Ricardo']
+let team2 = ['Valeria', 'Jessica', 'Camila']
+
+let education = ['David', ...team1, ...team2]
+
+console.log(education)
+
+/* variables */
+
+{
+  var globalVar = 'Global Var'
+}
+
+{
+  let globalLet = 'Global Let'
+  console.log(globalLet) // Global Let: porque es de scope local
+}
+
+console.log(globalVar) // Global Var: porque es de scope global
+
+/* 
+  const a = 'b'
+  a = 'a' 
+
+  No se puede reasignar una variable declarada con const
+*/
+
